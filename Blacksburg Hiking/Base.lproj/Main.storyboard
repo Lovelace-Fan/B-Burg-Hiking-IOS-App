@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main PageVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainPageVC" customModule="Blacksburg_Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B-Burg Hiking!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7el-PY-u8e">
+                                <rect key="frame" x="20" y="70" width="560" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GfT-ee-kVv"/>
+                                    <constraint firstAttribute="width" constant="335" id="yew-ct-lYb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cl-fF-UwC">
+                                <rect key="frame" x="128" y="140" width="345" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="125" id="6U6-N2-4Dr"/>
+                                    <constraint firstAttribute="height" constant="35" id="BiR-LX-Olh"/>
+                                    <constraint firstAttribute="width" constant="120" id="XK7-jq-bhp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="fLc-nG-R2M"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="287" id="kDq-Nd-Zix"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Choose Hike"/>
+                                <connections>
+                                    <action selector="hikeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXI-nd-qFm"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qRO-2f-u5a">
+                                <rect key="frame" x="40" y="183" width="520" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="121" id="Go3-Yg-Kj2"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57378315925598145" green="0.91176384687423706" blue="0.55000263452529907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5cl-fF-UwC" secondAttribute="trailing" constant="127.5" id="2Si-Dd-kZg"/>
+                            <constraint firstItem="7el-PY-u8e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9M8-4a-YGO"/>
+                            <constraint firstItem="qRO-2f-u5a" firstAttribute="top" secondItem="5cl-fF-UwC" secondAttribute="bottom" constant="8" id="DrR-NF-BI4"/>
+                            <constraint firstItem="5cl-fF-UwC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127.5" id="FDl-W1-Cc9"/>
+                            <constraint firstItem="5cl-fF-UwC" firstAttribute="top" secondItem="7el-PY-u8e" secondAttribute="bottom" constant="10" id="FKU-WX-BVg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qRO-2f-u5a" secondAttribute="trailing" constant="40" id="Fhb-Gz-uYo"/>
+                            <constraint firstItem="qRO-2f-u5a" firstAttribute="centerX" secondItem="5cl-fF-UwC" secondAttribute="centerX" id="SH5-Rb-gIH"/>
+                            <constraint firstItem="7el-PY-u8e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="TH7-Kz-n7l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7el-PY-u8e" secondAttribute="trailing" constant="20" id="e1z-0P-M8X"/>
+                            <constraint firstItem="5cl-fF-UwC" firstAttribute="centerX" secondItem="7el-PY-u8e" secondAttribute="centerX" id="fFw-vv-5E5"/>
+                            <constraint firstItem="7el-PY-u8e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ie2-au-inr"/>
+                            <constraint firstItem="7el-PY-u8e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="izb-of-J4w"/>
+                            <constraint firstItem="qRO-2f-u5a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="rRK-04-WJJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="hikePicker" destination="qRO-2f-u5a" id="vf6-Eb-mSm"/>
+                        <outlet property="hikePickerButton" destination="5cl-fF-UwC" id="9Vy-3n-TuA"/>
+                        <segue destination="oUV-x1-jTc" kind="showDetail" identifier="HikeVC" id="vuo-PB-j1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-521" y="-268"/>
+        </scene>
+        <!--Detail HikeVC-->
+        <scene sceneID="CoJ-nq-REZ">
+            <objects>
+                <viewController id="oUV-x1-jTc" customClass="DetailHikeVC" customModule="Blacksburg_Hiking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VWq-r7-f7y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMH-6i-pbe">
+                                <rect key="frame" x="16" y="235" width="568" height="322"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="322" id="QPB-82-NND"/>
+                                    <constraint firstAttribute="width" constant="343" id="jfO-kn-2R1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pam-er-rA5">
+                                <rect key="frame" x="0.0" y="54" width="375" height="240"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfN-eF-a4c">
+                                <rect key="frame" x="21" y="16" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="QKi-s3-bP4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90932190418243408" green="0.78868299722671509" blue="0.44970303773880005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="20P-Ue-gp9" firstAttribute="bottom" secondItem="uMH-6i-pbe" secondAttribute="bottom" constant="43" id="LKX-Lo-J9a"/>
+                            <constraint firstItem="uMH-6i-pbe" firstAttribute="top" secondItem="Pam-er-rA5" secondAttribute="bottom" constant="42" id="Xbf-6E-Tqe"/>
+                            <constraint firstItem="uMH-6i-pbe" firstAttribute="leading" secondItem="20P-Ue-gp9" secondAttribute="leading" constant="16" id="aNz-sE-dXX"/>
+                            <constraint firstItem="20P-Ue-gp9" firstAttribute="trailing" secondItem="uMH-6i-pbe" secondAttribute="trailing" constant="16" id="nAx-Cv-W7R"/>
+                            <constraint firstItem="uMH-6i-pbe" firstAttribute="centerX" secondItem="Pam-er-rA5" secondAttribute="centerX" id="xjt-rD-6dY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="20P-Ue-gp9"/>
+                    </view>
+                    <connections>
+                        <outlet property="hikeTextFE" destination="uMH-6i-pbe" id="1Dw-LU-BJc"/>
+                        <outlet property="hikingImage" destination="Pam-er-rA5" id="cfd-QL-W77"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXm-wo-Whm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="-269"/>
+        </scene>
+    </scenes>
+</document>
