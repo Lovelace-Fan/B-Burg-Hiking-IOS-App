@@ -13,15 +13,18 @@ struct HikeOb {
     var name = "";
     var description = "";
     var hikeIndex: Int? = 0;
+    var total: Int? = 0;
     
     init(name: String? = nil,
         description: String? = nil,
-        hikeIndex: Int? = nil
+        hikeIndex: Int? = nil,
+        total: Int? = nil
         ) {
         
         self.name = name!;
         self.description = description!;
         self.hikeIndex = hikeIndex!;
+        self.total = total!;
         
     }
     
@@ -31,29 +34,14 @@ struct HikeOb {
 class MainPageVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var hIndex = 0;
-    
-    var csvRows = Array<Array<String>>();
-    
+
     var hikeHike = Array<Array<String>>();
     
     @IBOutlet weak var hikePickerButton: UIButton!
 
     @IBOutlet weak var hikePicker: UIPickerView!
     
-    func readDataFromCSV(fileName:String, fileType: String)-> String!{
-        guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
-            else {
-                return nil
-        }
-        do {
-            var contents = try String(contentsOfFile: filepath, encoding: .utf8)
-            contents = cleanRows(file: contents)
-            return contents
-        } catch {
-            print("File Read Error for file \(filepath)")
-            return nil
-        }
-    }
+   
     
     func readJSONFromFile(fileName: String) -> Any?
     {
@@ -71,40 +59,17 @@ class MainPageVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         return json
     }
 
-
-    func cleanRows(file:String)->String{
-        var cleanFile = file
-        cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
-        cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
-        return cleanFile
-    }
-
-    func csv(data: String) -> [[String]] {
-        var result: [[String]] = []
-        let rows = data.components(separatedBy: "\n")
-        for row in rows {
-            let columns = row.components(separatedBy: ",")
-            result.append(columns)
-        }
-        return result
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad();
         hikePicker.delegate = self;
         hikePicker.dataSource = self;
         
-//        var data = readDataFromCSV(fileName: "hike_data", fileType: "csv")
-//        data = cleanRows(file: data!)
-//        csvRows = csv(data: data!)
+
         var jsonData = readJSONFromFile( fileName: "hike_data") as? Array<Any>
         print(type(of: jsonData))
         for index in 0...jsonData!.count - 1 {
-            var jsonData2 = jsonData![index] as? Array<String>
-            
-//            print(jsonData2![0])//hike name
-//            print(type(of: jsonData2![0])) //hike detail
+            let jsonData2 = jsonData![index] as? Array<String>
             hikeHike.append(jsonData2!);
         }
 
@@ -123,6 +88,7 @@ class MainPageVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                 vc.currentHike.description = detail.description;
                 vc.currentHike.name = detail.name;
                 vc.currentHike.hikeIndex = detail.hikeIndex;
+                vc.currentHike.total = detail.total;
             }
         }
     }
@@ -147,7 +113,7 @@ class MainPageVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         hikePickerButton.setTitle(hikeHike[row][0].description, for: .normal);
         hikePicker.isHidden = true;
         hIndex = row;
-        let hikeOb = HikeOb(name: self.hikeHike[hIndex][0].description, description: self.hikeHike[hIndex][1].description, hikeIndex: hIndex)
+        let hikeOb = HikeOb(name: self.hikeHike[hIndex][0].description, description: self.hikeHike[hIndex][1].description, hikeIndex: hIndex, total: hikeHike.count)
        
        
 
