@@ -11,7 +11,7 @@
 		F02A93CD22A3E12100C8A2D7 /* MainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A93CC22A3E12100C8A2D7 /* MainPageVC.swift */; };
 		F02A93D022A3E12100C8A2D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02A93CE22A3E12100C8A2D7 /* Main.storyboard */; };
 		F02A93D522A3E12100C8A2D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02A93D322A3E12100C8A2D7 /* LaunchScreen.storyboard */; };
-		F032C24D22A67228004931DE /* hike_data.csv in Resources */ = {isa = PBXBuildFile; fileRef = F032C24C22A67228004931DE /* hike_data.csv */; };
+		F04BC36022A8C6CF00BABE85 /* hike_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F04BC35F22A8C6CF00BABE85 /* hike_data.json */; };
 		F0E20D7F22A4FE7C00DE351F /* DetailHikeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E20D7E22A4FE7C00DE351F /* DetailHikeVC.swift */; };
 		F0E20D8122A5250400DE351F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E20D8022A5250400DE351F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -23,7 +23,7 @@
 		F02A93CF22A3E12100C8A2D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F02A93D422A3E12100C8A2D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F02A93D622A3E12100C8A2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F032C24C22A67228004931DE /* hike_data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hike_data.csv; sourceTree = "<group>"; };
+		F04BC35F22A8C6CF00BABE85 /* hike_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hike_data.json; sourceTree = "<group>"; };
 		F0E20D7E22A4FE7C00DE351F /* DetailHikeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHikeVC.swift; sourceTree = "<group>"; };
 		F0E20D8022A5250400DE351F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,11 +60,11 @@
 			children = (
 				F02A93CA22A3E12100C8A2D7 /* AppDelegate.swift */,
 				F02A93CC22A3E12100C8A2D7 /* MainPageVC.swift */,
+				F04BC35F22A8C6CF00BABE85 /* hike_data.json */,
 				F02A93CE22A3E12100C8A2D7 /* Main.storyboard */,
 				F0E20D8022A5250400DE351F /* Assets.xcassets */,
 				F02A93D322A3E12100C8A2D7 /* LaunchScreen.storyboard */,
 				F02A93D622A3E12100C8A2D7 /* Info.plist */,
-				F032C24C22A67228004931DE /* hike_data.csv */,
 				F0E20D7E22A4FE7C00DE351F /* DetailHikeVC.swift */,
 			);
 			path = "Blacksburg Hiking";
@@ -128,8 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04BC36022A8C6CF00BABE85 /* hike_data.json in Resources */,
 				F02A93D522A3E12100C8A2D7 /* LaunchScreen.storyboard in Resources */,
-				F032C24D22A67228004931DE /* hike_data.csv in Resources */,
 				F0E20D8122A5250400DE351F /* Assets.xcassets in Resources */,
 				F02A93D022A3E12100C8A2D7 /* Main.storyboard in Resources */,
 			);
